@@ -8,26 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		E74C400C2305DE48009CB551 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C400B2305DE48009CB551 /* AppDelegate.swift */; };
-		E74C400E2305DE48009CB551 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = E74C400D2305DE48009CB551 /* GameScene.sks */; };
-		E74C40102305DE48009CB551 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = E74C400F2305DE48009CB551 /* Actions.sks */; };
 		E74C40122305DE48009CB551 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C40112305DE48009CB551 /* GameScene.swift */; };
 		E74C40142305DE48009CB551 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C40132305DE48009CB551 /* GameViewController.swift */; };
 		E74C40172305DE48009CB551 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74C40152305DE48009CB551 /* Main.storyboard */; };
 		E74C40192305DE4A009CB551 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E74C40182305DE4A009CB551 /* Assets.xcassets */; };
 		E74C401C2305DE4A009CB551 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E74C401A2305DE4A009CB551 /* LaunchScreen.storyboard */; };
+		E74C4032230C8E38009CB551 /* TouchableSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = E74C4031230C8E38009CB551 /* TouchableSprite.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E74C40082305DE48009CB551 /* spritz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spritz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E74C400B2305DE48009CB551 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E74C400D2305DE48009CB551 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		E74C400F2305DE48009CB551 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		E74C40112305DE48009CB551 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		E74C40132305DE48009CB551 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E74C40162305DE48009CB551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E74C40182305DE4A009CB551 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E74C401B2305DE4A009CB551 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E74C401D2305DE4A009CB551 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E74C402E230C715C009CB551 /* dpad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dpad.png; sourceTree = "<group>"; };
+		E74C4030230C715C009CB551 /* pro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pro.png; sourceTree = "<group>"; };
+		E74C4031230C8E38009CB551 /* TouchableSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchableSprite.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +60,9 @@
 		E74C400A2305DE48009CB551 /* spritz */ = {
 			isa = PBXGroup;
 			children = (
+				E74C402D230C714A009CB551 /* assets */,
 				E74C400B2305DE48009CB551 /* AppDelegate.swift */,
-				E74C400D2305DE48009CB551 /* GameScene.sks */,
-				E74C400F2305DE48009CB551 /* Actions.sks */,
+				E74C4031230C8E38009CB551 /* TouchableSprite.swift */,
 				E74C40112305DE48009CB551 /* GameScene.swift */,
 				E74C40132305DE48009CB551 /* GameViewController.swift */,
 				E74C40152305DE48009CB551 /* Main.storyboard */,
@@ -71,6 +71,15 @@
 				E74C401D2305DE4A009CB551 /* Info.plist */,
 			);
 			path = spritz;
+			sourceTree = "<group>";
+		};
+		E74C402D230C714A009CB551 /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				E74C402E230C715C009CB551 /* dpad.png */,
+				E74C4030230C715C009CB551 /* pro.png */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -132,10 +141,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E74C40172305DE48009CB551 /* Main.storyboard in Resources */,
-				E74C400E2305DE48009CB551 /* GameScene.sks in Resources */,
 				E74C40192305DE4A009CB551 /* Assets.xcassets in Resources */,
 				E74C401C2305DE4A009CB551 /* LaunchScreen.storyboard in Resources */,
-				E74C40102305DE48009CB551 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +155,7 @@
 			files = (
 				E74C40122305DE48009CB551 /* GameScene.swift in Sources */,
 				E74C40142305DE48009CB551 /* GameViewController.swift in Sources */,
+				E74C4032230C8E38009CB551 /* TouchableSprite.swift in Sources */,
 				E74C400C2305DE48009CB551 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

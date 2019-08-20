@@ -1,50 +1,21 @@
-//
-//  GameViewController.swift
-//  spritz
-//
-//  Created by Philip Gingerich on 8/15/19.
-//  Copyright © 2019 Philip Gingerich. All rights reserved.
-//
-
-import UIKit
 import SpriteKit
-import GameplayKit
 
 class GameViewController: UIViewController {
-
     override func viewDidLoad() {
-        super.viewDidLoad()
+        let scene = GameScene(size: view.frame.size)
+//        scene.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        let pro = SKSpriteNode(imageNamed: "pro")
+        pro.name = "pro"
+        pro.position = CGPoint(x: 200, y: 200)
         
-        if let view = self.view as! SKView? {
-            // Load the SKScene from 'GameScene.sks'
-            if let scene = SKScene(fileNamed: "GameScene") {
-                // Set the scale mode to scale to fit the window
-                scene.scaleMode = .aspectFill
-                
-                // Present the scene
-                view.presentScene(scene)
-            }
-            
-            view.ignoresSiblingOrder = true
-            
-            view.showsFPS = true
-            view.showsNodeCount = true
-        }
-    }
-
-    override var shouldAutorotate: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
+        let upButton = TouchableSprite(imageNamed: "dpad")
+        upButton.name = "upButton"
+        upButton.position = CGPoint(x: 100, y: 100)
+        
+        scene.addChild(pro)
+        scene.addChild(upButton)
+        
+        let skView = view as! SKView
+        skView.presentScene(scene)
     }
 }
