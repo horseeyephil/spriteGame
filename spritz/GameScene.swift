@@ -5,9 +5,7 @@ class GameScene: SKScene {
     lazy var character = childNode(withName: "pro")
     
     override func didMove(to view: SKView) {
-        
         registerSwipeGestures(view: view)
-        
     }
     
     func registerSwipeGestures(view: SKView) {
